@@ -150,3 +150,57 @@ nav {
 		font-size: $forum-auth;
 	}
 }
+
+@media only screen and (max-width: 64.0625em) {
+
+	#logo, nav {
+		margin: $top-header-mobile !important;
+	}
+
+	#slogan {
+		display: none;
+	}
+
+	nav {
+		a {
+			font-size: $nav-items-mobile;
+		}
+	}
+
+	#content {
+		padding: 0 20px;
+
+		h1 {
+			font-size: $h1-mobile;
+			line-height: 1em;
+			margin-bottom: 20px;
+		}
+
+		.subtext {
+			font-size: $subtext-mobile;
+		}
+
+		.feature {
+			margin-top: 30px;
+		}
+	}
+}
+
+@media only screen and (max-width: 64.0625em) {
+
+	#logo, nav {
+		margin: $top-header-phone;
+	}
+
+	.gcontainer {
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 70%;
+
+		img {
+			width: 100% !important;
+		}
+	}
+}
