@@ -3,6 +3,7 @@
 @import "colors";
 @import "typography";
 @import "marginpadding";
+@import "compass/css3/transform";
 
 body {
 	background-color: $background;
@@ -26,4 +27,126 @@ h1, h2, h3, h4, h5, h6 {
 	color: $dark-blue;
 	margin-bottom: 20px;
 	display: block;
+}
+
+nav {
+	ul {
+		list-style-type: none;
+		float: right;
+	}
+	li {
+		display: inline;
+		float: left;
+		&:last-child a {
+			paddding-right: 0;
+		}
+		&:first-child a {
+			padding-left: 0;
+		}
+	}
+	a {
+		padding: $top-nav-padding;
+		text-transform: uppercase;
+		color: $dark-blue;
+		font-size: $nav-items;
+	}
+}
+
+#content {
+	background: url(../images/hero.jpg) no-repeat;
+	background-size: cover;
+	height: 550px;
+	width: 100%;
+	overflow: visible;
+
+	.feature {
+		background: $accent;
+		color: #fff;
+		text-transform: uppercase;
+		display: inline-block;
+		padding: 0 5px;
+		font-size: $feature;
+		margin-top: $feature-padding;
+		margin-bottom: 0;
+	}
+
+	h1 {
+		color: #fff;
+		font-size: $h1;
+		margin-bottom: 0;
+	}
+
+	.subtext {
+		color: $light-blue;
+		font-size: $subtext;
+		margin-bottom: 70px;
+	}
+}
+
+.gallery {
+
+	.gcontainer {
+		background: $gallery-background;
+		padding: $gallery-padding;
+		width: 230px;
+		margin-bottom: 15px;
+
+		&:hover {
+			@include transform(scale(1.05));
+		}
+	}
+
+	.gtitle {
+		color: $dark-blue;
+		font-size: $article-titles;
+		line-height: $article-titles-lh;
+		margin: $gallery-margin-inner;
+		display: block;
+	}
+
+	.gsubtext {
+		color: $dark-blue;
+		font-size: $article-subtitles;
+		margin: $gallery-margin-inner;
+	}
+
+	.gsubtext strong {
+		color: $accent;
+	}
+}
+
+.sidebar {
+	background-color:  $light-blue;
+	padding: 12px 15px;
+
+	h2{
+		text-transform: uppercase;
+		font-size: $sidebar-titles;
+		display: inline;
+		float: left;		
+	}
+
+	img {
+		display: inline;
+		float: right;
+	}
+
+	ul {
+		list-style-type: none;
+		clear: both;
+		margin: 40px 0 0 0;
+	}
+
+	a{
+		color: #000;
+		font-size: $forum-title;
+	}
+
+	a span {
+		color: $mid-blue !important;
+		text-transform: uppercase;
+		margin: -5px 0 12px 0;
+		display: block;
+		font-size: $forum-auth;
+	}
 }
